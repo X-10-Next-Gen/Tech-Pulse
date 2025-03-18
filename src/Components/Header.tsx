@@ -22,7 +22,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="bg-cyan-950 py-6 px-8 text-white z-50">
+      <div className="bg-cyan-950 py-6 px-8 text-white z-[9999]">
         <header className="pt-25 flex flex-col md:flex-row items-center justify-between">
           {/* Title and Tagline */}
           <div className="text-center md:text-left">
@@ -51,18 +51,17 @@ const Header = () => {
             isScrolled
               ? "w-[80%] bg-cyan-950/80 backdrop-blur-md shadow-lg py-3 rounded-xl"
               : "w-full bg-cyan-950 py-6"
-          }`}
+          } z-[9999]`}
         >
           {/* Logo */}
           <h1 className="text-2xl font-bold text-cyan-400">Tech Pulse</h1>
 
           {/* Desktop Menu */}
           <ul className="hidden lg:flex flex-row gap-6 text-lg">
-            
-           <Link to="/"> <li className="cursor-pointer hover:text-cyan-300">Home</li></Link>
-           <Link to="/articles"> <li className="cursor-pointer hover:text-cyan-300">Articles</li> </Link>
-           <Link to="/tutorials">   <li className="cursor-pointer hover:text-cyan-300">Tutorials</li> </Link>
-           <Link to="/news">   <li className="cursor-pointer hover:text-cyan-300">News</li> </Link>
+            <Link to="/"> <li className="cursor-pointer hover:text-cyan-300">Home</li></Link>
+            <Link to="/articles"> <li className="cursor-pointer hover:text-cyan-300">Articles</li> </Link>
+            <Link to="/tutorials"> <li className="cursor-pointer hover:text-cyan-300">Tutorials</li> </Link>
+            <Link to="/news"> <li className="cursor-pointer hover:text-cyan-300">News</li> </Link>
           </ul>
 
           {/* Social Media Icons (Hidden on Mobile) */}
@@ -73,10 +72,10 @@ const Header = () => {
             <FaWhatsapp className="cursor-pointer hover:text-cyan-300" />
           </div>
 
-          {/* Sign Up Button (Hidden on Mobile) */}
-          <button className="cursor-pointer uppercase bg-cyan-900 px-4 py-2 active:translate-x-0.5 active:translate-y-0.5 hover:shadow-[0.5rem_0.5rem_#F44336,-0.5rem_-0.5rem_#00BCD4] transition">
-      Sign up
-    </button>
+          {/* Sign Up Button (Visible on Desktop) */}
+          <button className="hidden lg:block cursor-pointer uppercase bg-cyan-900 px-4 py-2 active:translate-x-0.5 active:translate-y-0.5 hover:shadow-[0.5rem_0.5rem_#F44336,-0.5rem_-0.5rem_#00BCD4] transition">
+            Sign up
+          </button>
 
           {/* Mobile Menu Toggle */}
           <button
@@ -91,7 +90,7 @@ const Header = () => {
         <div
           className={`lg:hidden fixed top-0 left-0 h-screen w-2/3 bg-cyan-950 p-6 shadow-lg transition-transform duration-300 ${
             isOpen ? "translate-x-0" : "-translate-x-full"
-          }`}
+          } z-[9999]`}
         >
           <button
             className="text-white text-2xl absolute top-4 right-4"
@@ -116,9 +115,9 @@ const Header = () => {
           </div>
 
           {/* Sign Up Button in Mobile Menu */}
-          <button className="cursor-pointer uppercase bg-cyan-900 px-4 py-2 active:translate-x-0.5 active:translate-y-0.5 hover:shadow-[0.5rem_0.5rem_#F44336,-0.5rem_-0.5rem_#00BCD4] transition">
-      Sign up
-    </button>
+          <button className="mt-6 cursor-pointer uppercase bg-cyan-900 px-4 py-2 active:translate-x-0.5 active:translate-y-0.5 hover:shadow-[0.5rem_0.5rem_#F44336,-0.5rem_-0.5rem_#00BCD4] transition">
+            Sign up
+          </button>
         </div>
       </div>
     </>
