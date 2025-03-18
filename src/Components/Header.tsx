@@ -100,10 +100,10 @@ const Header = () => {
           </button>
 
           <ul className="flex flex-col gap-6 text-lg mt-10">
-            <li className="cursor-pointer hover:text-cyan-300">Home</li>
-            <li className="cursor-pointer hover:text-cyan-300">Articles</li>
-            <li className="cursor-pointer hover:text-cyan-300">Tutorials</li>
-            <li className="cursor-pointer hover:text-cyan-300">News</li>
+              <Link to="/"> <li className="cursor-pointer hover:text-cyan-300">Home</li></Link>
+            <Link to="/articles"> <li className="cursor-pointer hover:text-cyan-300">Articles</li> </Link>
+            <Link to="/tutorials"> <li className="cursor-pointer hover:text-cyan-300">Tutorials</li> </Link>
+            <Link to="/news"> <li className="cursor-pointer hover:text-cyan-300">News</li> </Link>
           </ul>
 
           {/* Social Media Icons in Mobile Menu */}
