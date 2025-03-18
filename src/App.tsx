@@ -7,6 +7,7 @@ import Articles from './Pages/Articles';
 import News from './Pages/News';
 import Tutorials from './Pages/Tutorials';
 import Loader from './Components/Loader';
+import Footer from './Components/Footer';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -21,7 +22,7 @@ function App() {
 
   return (
     <Router>
-      <div className="bg-gray-900 text-white min-h-screen">
+      <div className="bg-cyan-950 text-white min-h-screen">
         {loading ? (
           <div className="flex items-center justify-center h-screen">
             <Loader />
@@ -35,6 +36,7 @@ function App() {
               <Route path="/news" element={<News />} />
               <Route path="/tutorials" element={<Tutorials />} />
             </Routes>
+            <Footer />
           </div>
         )}
       </div>
